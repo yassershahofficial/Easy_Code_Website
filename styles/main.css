@@ -1,0 +1,41 @@
+.main{
+    position: relative;
+    z-index: 0;
+    /*height: 100vh;*/
+    background-color: var(--lightblue); /* For browsers that do not support gradients */
+    background-image: linear-gradient(180deg, var(--blue), var(--lightblue));
+    display: grid;
+    padding: 4rem 8rem;
+    margin-top: var(--nav-height);
+    overflow-x: hidden;
+}
+.left-main{
+    z-index: 1;
+}
+.main h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+.main img{
+    position: absolute;
+    top: .5rem;
+    right: -10rem;
+    z-index: -1;
+    height: 95%;
+    -webkit-mask-image:-webkit-gradient(linear, right, left, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    
+}
+.location-left-main{
+    display: grid;
+    grid-template-columns: 1.5rem auto;
+    margin-bottom: 1.5rem;
+}
+.left-main p{
+    margin-top: 1.7rem;
+    width: 30rem;
+}
+.btn-left-main{
+    display: flex;
+    margin-top: 2rem;
+}

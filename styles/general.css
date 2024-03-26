@@ -1,0 +1,46 @@
+:root {
+    font-size: 16px;
+    background-color: var(--blue);
+    --lightblue: #C6E9F3;
+    --blue: #19A7CE;
+    --darkblue: #146C94;
+    --darkblueless: rgba(16, 67, 91, 0.4);
+    --darkestblue: #10435B;
+    --white: #F6F1F1;
+    --nav-height: 4.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+    border: none;
+}
+.disable-copy{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.jump-text{
+    margin-left: 20%;
+}
+.ceiling-text{
+    margin-top: 2.5rem;
+}
+.gap-text{
+    margin-bottom: 2rem;
+}
+.text-indent{
+    text-indent: 10%;
+}
+.checked {
+    color: orange;
+}

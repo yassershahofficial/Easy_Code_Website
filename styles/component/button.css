@@ -1,0 +1,52 @@
+.btn-navbar{
+    width: 10rem;
+    display: flex;
+    white-space: nowrap;
+    color: var(--darkblue);
+    background-color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-left: 0.4rem;
+}
+.btn-navbar p{
+    margin: 0 0.8rem;
+}
+.btn-navbar i{
+    margin-left: 0.7rem;
+    visibility: hidden;
+}
+.btn-navbar:hover p{
+    margin: 0;
+}
+.btn-navbar:hover i{
+    visibility: visible;
+}
+.btn-navbar:active{
+    opacity: 0.95;
+}
+.btn-learnmore{
+    width: 10rem;
+    display: flex;
+    white-space: nowrap;
+    color: var(--white);
+    background-color: var(--darkblue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-left: 0.4rem;
+}
+.btn-learnmore p{
+    margin: 0 0.8rem;
+}
+.btn-learnmore i{
+    margin-left: 0.7rem;
+    visibility: hidden;
+}
+.btn-learnmore:hover p{
+    margin: 0;
+}
+.btn-learnmore:hover i{
+    visibility: visible;
+}
+.btn-learnmore:active{
+    opacity: 0.95;
+}
