@@ -1,29 +1,39 @@
 .socialproof{
-    display: grid;
-    grid-template-columns: 30rem 30rem 30rem;
-    column-gap: 1.2rem;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--darkestblue); 
-    background-image: linear-gradient(to bottom, var(--blue), var(--darkestblue));
-}
-.sub-socialproof{
     display: flex;
     flex-direction: column;
-    grid-template-rows: auto;
-    background-color: var(--darkblueless);
-    height: 80%;
-    justify-content: center;
-    align-items: center;
+    background-color: none;
     text-align: center;
 }
-.sub-socialproof img{
-    object-fit: cover;
-    width: 50%;
-    border-radius: 50%;
+.socialproof h2{
+    margin-top: 3.2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 3rem;
 }
-.sub-socialproof p{
+.swiper {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 5rem;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: contain;
+    font-size: 18px;
+    background-color: var(--darkblueless);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    object-fit: cover;
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 15%;
+    margin-bottom: -2%;
+}
+.swiper-slide p{
     word-wrap: break-word;
-    width: 70%;
+    width: 60%;
+    margin: 5% 20%;
 }

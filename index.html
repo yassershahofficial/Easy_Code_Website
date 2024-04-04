@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- icons & fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
@@ -13,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=IM+Fell+Double+Pica&family=PT+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
+    <!-- nav & section styling css -->
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -20,6 +22,9 @@
     <link rel="stylesheet" href="styles/story.css">
     <link rel="stylesheet" href="styles/socialproof.css">
     <link rel="stylesheet" href="styles/component/button.css">
+
+    <!--swiper css API-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    
     <title>Easy Code</title>
 </head>
 <body>
@@ -154,54 +159,65 @@
             <img class="story-div-photo" src="icon/group2.jpg" alt="group photo 2" draggable="false">
         </div>
     </section>
-    <section class="socialproof" id="socialproof">
-        <div class="sub-socialproof">
-            <img class="gap-text" src="icon/socialperson2.jpg" alt="person 1">
-            <p class="gap-text">Emily Mei</p>
-            <div class="gap-text">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+    <!-- Swiper -->
+    <section class="socialproof"  id="socialproof">
+        <h2>Reviews</h2>
+        <div class="swiper swiper-socialproof">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="gap-text" src="icon/socialperson2.jpg" alt="person 1">
+                    <p class="gap-text">Emily Mei</p>
+                    <div class="gap-text">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p>
+                        "I can't get enough of these classes! The community vibe makes 
+                        learning even more enjoyable." 
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="gap-text" src="icon/socialperson.jpg" alt="person 1">
+                    <p class="gap-text">James Stephen Donaldson</p>
+                    <div class="gap-text">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p>
+                        "Highly recommend these classes! They're engaging, interactive, 
+                        and have really helped me improve my skills."
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="gap-text" src="icon/socialperson3.jpg" alt="person 1">
+                    <p class="gap-text">Ahmad Dhani Hadi</p>
+                    <div class="gap-text">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p>
+                        "Absolutely loving the classes! The instructors are so 
+                        knowledgeable, and I'm learning a lot every session."
+                    </p>
+                </div>
             </div>
-            <p>
-                "I can't get enough of these classes! The community vibe makes 
-                learning even more enjoyable." 
-            </p>
-        </div>
-        <div class="sub-socialproof">
-            <img class="gap-text" src="icon/socialperson.jpg" alt="person 1">
-            <p class="gap-text">James Stephen Donaldson</p>
-            <div class="gap-text">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-            </div>
-            <p>
-                "Highly recommend these classes! They're engaging, interactive, 
-                and have really helped me improve my skills."
-            </p>
-        </div>
-        <div class="sub-socialproof">
-            <img class="gap-text" src="icon/socialperson3.jpg" alt="person 1">
-            <p class="gap-text">Ahmad Dhani Hadi</p>
-            <div class="gap-text">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-            </div>
-            <p>
-                "Absolutely loving the classes! The instructors are so 
-                knowledgeable, and I'm learning a lot every session."
-            </p>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
-
-    <script src="index.js"></script>
+    
+    <!--swiper js API-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
