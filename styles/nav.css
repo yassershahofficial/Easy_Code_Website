@@ -42,8 +42,6 @@
     justify-content: center;
     height: 100%;
     padding: 0 0.6rem;
-    text-decoration: none;
-    color: var(--white);
 }
 .right-navbar a:hover{
     background-color: var(--darkblue);

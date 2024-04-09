@@ -1,0 +1,46 @@
+.footer{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: var(--darkblue); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, var(--darkblue), var(--blue));
+    color: var(--lightblue);
+    height: 20rem;
+    padding: 5% 15%;
+}
+
+.logo-footer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: left;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.logo-footer i{
+    margin: 0 1rem -1rem 0;
+}
+.pair-left-footer{
+    margin-bottom: 2rem;
+}
+.right-footer{
+    margin-top: 1rem;
+}
+.right-footer div{
+    display: grid;
+    grid-template-columns: 10rem;
+    row-gap: 2rem;
+    margin-bottom: 1rem;
+}
+.right-footer div:first-child div{
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    row-gap: 0.5rem;
+}
+.right-footer div:last-child div{
+    display: grid;
+    grid-template-columns: 10rem;
+    row-gap: 0.5rem;
+}
+.right-footer div p{
+    font-weight: bold;
+}
