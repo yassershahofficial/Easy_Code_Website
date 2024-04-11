@@ -1,4 +1,5 @@
 .footer{
+    position: relative;
     display: grid;
     grid-template-columns: 60% 40%;
     background-color: var(--darkblue); /* For browsers that do not support gradients */
@@ -43,4 +44,16 @@
 }
 .right-footer div p{
     font-weight: bold;
+}
+.to-the-top{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.to-the-top:hover{
+    font-size: 3.2rem;
+    bottom: 0.9rem;
+    right: 0.9rem;
 }
