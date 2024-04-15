@@ -41,3 +41,19 @@
     });
 
 }
+//hidden contact form & request alert
+{
+    function hiddenContactForm(){
+        var toggleContactForm = document.getElementById("contact");
+        toggleContactForm.style.visibility = "hidden";
+    }
+    function requestContactFormSent(){
+        var toggleContactForm = document.getElementById("contact");
+        toggleContactForm.style.visibility = "hidden";
+        alert("Your request has been sent");
+    }
+    function visibleContactForm(){
+        var toggleContactForm = document.getElementById("contact");
+        toggleContactForm.style.visibility = "visible";
+    }
+}

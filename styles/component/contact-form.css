@@ -1,0 +1,30 @@
+.contact{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    visibility: visible;
+}
+.contact-form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 6rem;
+    background-color: var(--white);
+    z-index: 11;
+}
+.contact-bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--darkblueless);
+}

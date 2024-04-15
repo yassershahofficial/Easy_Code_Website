@@ -24,10 +24,13 @@
     <link rel="stylesheet" href="styles/socialproof.css">
     <link rel="stylesheet" href="styles/component/button.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/component/contact-form.css">
 
     <!--swiper css API-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    
+    <script src="js/index.js"></script>
     <title>Easy Code</title>
+
 </head>
 <body>
 
@@ -41,7 +44,7 @@
             <a id="link" href="#about-benefits">BENEFITS</a>
             <a id="link" href="#story">STORY</a>
             <a id="link" href="#socialproof">SOCIAL PROOF</a>
-            <button class="btn-navbar">
+            <button class="btn-navbar" onclick="visibleContactForm();">
                 <p>CONTACT US</p>
                 <i class="fi fi-rr-phone-call"></i>
             </button>
@@ -67,7 +70,7 @@
                 and achieve rapid progress in mastering coding skills. 
             </p>
             <div class="btn-left-main disable-copy">
-                <button class="btn-navbar">
+                <button class="btn-navbar" onclick="visibleContactForm();">
                     <p>CONTACT US</p>
                     <i class="fi fi-rr-phone-call"></i>
                 </button>
@@ -277,8 +280,57 @@
         </a>
     </footer>
     
-    <!--swiper js API-->
+    <!-- contact us form -->
+    <section class="contact" id="contact">
+        <form id="contact-form" class="contact-form">
+            <label for="name">My Name</label>
+            <input type="text" id="from_name" name="from_name" placeholder="Your name.." required>
+        
+            <label for="reason">I'm interested in</label>
+            <select id="interested" name="interested" required>
+                <option value="" selected="selected" disabled>--Select One--</option>
+                <option value="online">Online</option>
+                <option value="physical">Physical</option>
+                <option value="both">Both</option>
+            </select>
+        
+            <label for="subject">Extra Comments</label>
+            <textarea id="message" name="message" placeholder="Feel free to ask anything .." style="height:5rem"></textarea>
+        
+            <input type="submit" value="Send" onclick="requestContactFormSent(); return false;">
+        </form>
+        <div class="contact-bg" onclick="hiddenContactForm();"></div>
+    </section>
+
+   
+    <!-- swiper js API -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- index js -->
     <script src="js/index.js"></script>
+
+    <!-- <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "3Ao3OPJnEWvI4P3t5",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_0qtlvf9', 'template_zu8jgiy', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script> -->
+    
 </body>
 </html>
