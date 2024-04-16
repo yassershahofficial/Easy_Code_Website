@@ -6,7 +6,7 @@
     left: 0;
     bottom: 0;
     z-index: 10;
-    visibility: visible;
+    visibility: hidden;
 }
 .contact-form{
     display: flex;

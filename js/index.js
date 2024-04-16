@@ -43,17 +43,35 @@
 }
 //hidden contact form & request alert
 {
-    function hiddenContactForm(){
-        var toggleContactForm = document.getElementById("contact");
-        toggleContactForm.style.visibility = "hidden";
+    function toggleContactForm(){
+        var contact = document.getElementById("contact");
+        if(contact.style.visibility === "hidden"){
+            contact.style.visibility = "visible";
+        }
+        else{
+            contact.style.visibility = "hidden";
+        }
     }
-    function requestContactFormSent(){
-        var toggleContactForm = document.getElementById("contact");
-        toggleContactForm.style.visibility = "hidden";
-        alert("Your request has been sent");
-    }
-    function visibleContactForm(){
-        var toggleContactForm = document.getElementById("contact");
-        toggleContactForm.style.visibility = "visible";
+}
+//Initialize Email JS
+{
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "3Ao3OPJnEWvI4P3t5",
+        });
+    })();
+
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('service_0qtlvf9', 'template_zu8jgiy', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+        });
     }
 }

@@ -44,7 +44,7 @@
             <a id="link" href="#about-benefits">BENEFITS</a>
             <a id="link" href="#story">STORY</a>
             <a id="link" href="#socialproof">SOCIAL PROOF</a>
-            <button class="btn-navbar" onclick="visibleContactForm();">
+            <button class="btn-navbar" onclick="toggleContactForm();">
                 <p>CONTACT US</p>
                 <i class="fi fi-rr-phone-call"></i>
             </button>
@@ -70,7 +70,7 @@
                 and achieve rapid progress in mastering coding skills. 
             </p>
             <div class="btn-left-main disable-copy">
-                <button class="btn-navbar" onclick="visibleContactForm();">
+                <button class="btn-navbar" onclick="toggleContactForm();">
                     <p>CONTACT US</p>
                     <i class="fi fi-rr-phone-call"></i>
                 </button>
@@ -297,9 +297,9 @@
             <label for="subject">Extra Comments</label>
             <textarea id="message" name="message" placeholder="Feel free to ask anything .." style="height:5rem"></textarea>
         
-            <input type="submit" value="Send" onclick="requestContactFormSent(); return false;">
+            <input type="submit" value="Send" onclick="">
         </form>
-        <div class="contact-bg" onclick="hiddenContactForm();"></div>
+        <div class="contact-bg" onclick="toggleContactForm();"></div>
     </section>
 
    
@@ -309,7 +309,9 @@
     <!-- index js -->
     <script src="js/index.js"></script>
 
-    <!-- <script type="text/javascript">
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
@@ -330,7 +332,7 @@
                     });
             });
         }
-    </script> -->
+    </script>
     
 </body>
 </html>
