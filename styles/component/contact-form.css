@@ -9,16 +9,31 @@
     visibility: hidden;
 }
 .contact-form{
-    display: flex;
+    display: grid;
+    grid-template-columns: 15rem 25rem;
     position: absolute;
-    flex-direction: column;
+    height: 60%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding: 6rem;
-    background-color: var(--white);
     z-index: 11;
+}
+.contact-form div:first-child{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 1.4rem;
+}
+.contact-form img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.contact-form div label{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 .contact-bg{
     position: absolute;
@@ -27,4 +42,12 @@
     top: 0;
     bottom: 0;
     background-color: var(--darkblueless);
+}
+.contact-form i{
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
 }

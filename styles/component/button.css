@@ -50,3 +50,19 @@
 .btn-learnmore:active{
     opacity: 0.95;
 }
+.btn-send{
+    width: 10rem;
+    white-space: nowrap;
+    color: var(--white);
+    background-color: var(--darkblue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    margin-top: 1rem;
+}
+.btn-send:hover{
+    opacity: 0.8;
+}
+.btn-send:active{
+    opacity: 0.6;
+}

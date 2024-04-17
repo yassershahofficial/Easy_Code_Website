@@ -37,3 +37,6 @@
     width: 60%;
     margin: 5% 20%;
 }
+.swiper-button-next,.swiper-button-prev{
+    background-color: var(--darkblueless);
+}

@@ -27,6 +27,9 @@ button {
     cursor: pointer;
     border: none;
 }
+textarea{
+    resize: none;
+}
 .disable-copy{
     -webkit-user-select: none;
     -khtml-user-select: none;

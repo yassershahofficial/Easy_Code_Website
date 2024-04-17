@@ -74,10 +74,12 @@
                     <p>CONTACT US</p>
                     <i class="fi fi-rr-phone-call"></i>
                 </button>
-                <button class="btn-learnmore">
-                    <p>LEARN MORE</p>
-                    <i class="fi fi-rr-graduation-cap"></i>
-                </button>
+                <a href="#footer">
+                    <button class="btn-learnmore">
+                        <p>LEARN MORE</p>
+                        <i class="fi fi-rr-graduation-cap"></i>
+                    </button>
+                </a>  
             </div>
         </div>
         <img src="icon/google-meet-encryption.png" alt="img" draggable="false">
@@ -237,7 +239,7 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="left-footer">
             <div class="logo-footer">
                 <i class="fi fi-rr-square-code"></i>
@@ -252,8 +254,8 @@
                 <p>Mon - Fri | 9:00am - 6:00pm</p>
             </div>
             <div class="pair-left-footer smaller-fonts">
-                <p>Copyright 2024 © Avocadot Web Design Sdn Bhd.</p>
-                <p>201901034199 (1343529-M). All Rights Reserved.</p>
+                <p>Copyright 2024 © Easy Code Sdn Bhd.</p>
+                <p>987654321234 (1234567-M). All Rights Reserved.</p>
             </div>
         </div>
         <div class="right-footer">
@@ -283,21 +285,25 @@
     <!-- contact us form -->
     <section class="contact" id="contact">
         <form id="contact-form" class="contact-form">
-            <label for="name">My Name</label>
-            <input type="text" id="from_name" name="from_name" placeholder="Your name.." required>
-        
-            <label for="reason">I'm interested in</label>
-            <select id="interested" name="interested" required>
-                <option value="" selected="selected" disabled>--Select One--</option>
-                <option value="online">Online</option>
-                <option value="physical">Physical</option>
-                <option value="both">Both</option>
-            </select>
-        
-            <label for="subject">Extra Comments</label>
-            <textarea id="message" name="message" placeholder="Feel free to ask anything .." style="height:5rem"></textarea>
-        
-            <input type="submit" value="Send" onclick="">
+            <div>
+                <label for="name">My Name</label>
+                <input type="text" id="from_name" name="from_name" placeholder="Your name.." required>
+            
+                <label for="reason">I'm interested in</label>
+                <select id="interested" name="interested" required>
+                    <option value="" selected="selected" disabled>--Select One--</option>
+                    <option value="online">Online</option>
+                    <option value="physical">Physical</option>
+                    <option value="both">Both</option>
+                </select>
+            
+                <label for="subject">Extra Comments</label>
+                <textarea id="message" name="message" placeholder="Feel free to ask anything .." style="height:5rem"></textarea>
+            
+                <input class="btn-send" type="submit" value="SEND TO EMAIL">
+            </div>
+            <img src="icon/contactForm.jpeg" alt="contactForm">
+            <i class="fi fi-sr-circle-x" onclick="toggleContactForm();"></i>
         </form>
         <div class="contact-bg" onclick="toggleContactForm();"></div>
     </section>
@@ -321,14 +327,18 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
+            var contact = document.getElementById("contact");
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
                 emailjs.sendForm('service_0qtlvf9', 'template_zu8jgiy', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        contact.style.visibility = "hidden";
+                        alert("Message Sent");
                     }, (error) => {
                         console.log('FAILED...', error);
+                        alert("Message Failed");
                     });
             });
         }
