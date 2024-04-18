@@ -53,3 +53,7 @@
         }
     }
 }
+//toggle right navbar 
+{
+
+}
