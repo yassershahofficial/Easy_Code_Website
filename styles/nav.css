@@ -50,24 +50,36 @@
 .right-navbar a:active{
     background-color: var(--darkestblue);
 }
-.fi-rr-menu-burger{
+/* .fi-rr-menu-burger{
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     cursor: pointer;
     visibility: hidden;
-}
+} */
 .remove-right-navbar{
     position: fixed;
+    background-color: transparent;
     cursor: pointer;
     visibility: hidden;
 }
-
+.remove-right-navbar:hover{
+    color: red;
+}
+.ham-navbar{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+    background-color: transparent;
+}
 @media(max-width:768px){
-    .navbar{
+    /* to check for each range temporary */
+    .navbar {
         background-color: red;
     }
-    .fi-rr-menu-burger{
+    .ham-navbar{
         visibility: visible;
     }
     .right-navbar{
@@ -90,11 +102,12 @@
     .remove-right-navbar{
         top: 1.3rem;
         right: 4.5rem;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         visibility: hidden;
     }
 }
 @media(max-width:640px){
+    /* to check for each range temporary */
     .navbar {
         background-color: yellow;
     }

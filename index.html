@@ -39,7 +39,7 @@
             <i class="fi fi-rr-square-code"></i>
             <p>Easy Code</p>
         </div>
-        <div class="right-navbar disable-copy">
+        <div class="right-navbar disable-copy" id="right-navbar">
             <a id="link" href="#">ABOUT</a>
             <a id="link" href="#about-benefits">BENEFITS</a>
             <a id="link" href="#story">STORY</a>
@@ -48,9 +48,13 @@
                 <p>CONTACT US</p>
                 <i class="fi fi-rr-phone-call"></i>
             </button>
-            <i class="fi fi-sr-circle-x remove-right-navbar"></i>
+            <button class="remove-right-navbar" id="remove-right-navbar" onclick="toggleShowNav();">
+                <i class="fi fi-sr-circle-x" ></i>
+            </button>
         </div>
-        <i class="fi fi-rr-menu-burger"></i>
+        <button class="ham-navbar" onclick="toggleShowNav();">
+            <i class="fi fi-rr-menu-burger"></i>
+        </button> 
     </nav>
 
     <section class="main" id="main">

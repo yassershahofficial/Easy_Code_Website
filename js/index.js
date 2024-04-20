@@ -55,5 +55,16 @@
 }
 //toggle right navbar 
 {
-
+    function toggleShowNav(){
+        var rightNavbar =  document.getElementById("right-navbar");
+        var removeRightNavbar =  document.getElementById("remove-right-navbar");
+        if(rightNavbar.style.visibility === "hidden"){
+            rightNavbar.style.visibility = "visible";
+            removeRightNavbar.style.visibility = "visible";
+        }
+        else{
+            rightNavbar.style.visibility = "hidden";
+            removeRightNavbar.style.visibility = "hidden";
+        }
+    }
 }
