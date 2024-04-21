@@ -5,7 +5,7 @@
     background-color: var(--lightblue); /* For browsers that do not support gradients */
     background-image: linear-gradient(180deg, var(--blue), var(--lightblue));
     display: grid;
-    padding: 4rem 8rem;
+    padding: 4rem 7%;
     margin-top: var(--nav-height);
     overflow-x: hidden;
 }
@@ -38,4 +38,19 @@
 .btn-left-main{
     display: flex;
     margin-top: 2rem;
+}
+@media(max-width:1000px){
+    .main img{
+        opacity: 0.4;
+    }
+}
+@media(max-width:768px){
+    .main img{
+        opacity: 0.2;
+    }
+}
+@media(max-width:640px){
+    .left-main p{
+        width: 100%;
+    }
 }
