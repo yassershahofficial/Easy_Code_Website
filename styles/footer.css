@@ -5,10 +5,8 @@
     background-color: var(--darkblue); /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, var(--darkblue), var(--blue));
     color: var(--lightblue);
-    height: 20rem;
     padding: 5% 15%;
 }
-
 .logo-footer{
     display: flex;
     align-items: center;
@@ -56,4 +54,14 @@
     font-size: 3.2rem;
     bottom: 0.9rem;
     right: 0.9rem;
+}
+@media(max-width:768px){
+    .logo-footer{
+        font-size: 2rem;
+    }
+}
+@media(max-width:640px){
+    .footer{
+        grid-template-columns: 100%;
+    }
 }

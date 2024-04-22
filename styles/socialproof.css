@@ -40,3 +40,14 @@
 .swiper-button-next,.swiper-button-prev{
     background-color: var(--darkblueless);
 }
+@media(max-width:768px){
+    .story div{
+        display: block;
+    }
+    .story-div-photo{
+        width: 100%;
+    }
+}
+@media(max-width:640px){
+    
+}

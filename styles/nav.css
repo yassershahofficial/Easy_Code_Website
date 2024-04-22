@@ -76,9 +76,9 @@
 }
 @media(max-width:768px){
     /* to check for each range temporary */
-    .navbar {
+    /* .navbar {
         background-color: red;
-    }
+    } */
     .ham-navbar{
         visibility: visible;
     }
@@ -108,7 +108,7 @@
 }
 @media(max-width:640px){
     /* to check for each range temporary */
-    .navbar {
+    /* .navbar {
         background-color: yellow;
-    }
+    } */
 }
