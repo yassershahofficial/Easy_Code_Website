@@ -36,3 +36,17 @@
     margin-top: -0.2rem;
     font-size: 1.2rem;
 }
+@media(max-width:768px){
+    .about-benefits{
+        grid-template-columns: 100%;
+    }
+    .right-benefits{
+        height: 0;
+        margin-bottom: 0;
+        padding: 0;
+        visibility: hidden;
+    }
+}
+@media(max-width:640px){
+    
+}
