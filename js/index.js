@@ -23,10 +23,12 @@
         if(widthWebPage >= 768){
             console.log("bigger");
             SlidesValue =  "2.5";
+            forceRemoveNav();
         }
         else{
             console.log("smaller");
             SlidesValue =  "1.5";
+            forceAddNav();
         }
         var swiper = new Swiper(".swiper-socialproof", {
             effect: "coverflow",
@@ -96,10 +98,10 @@
         }
     }
 }
-//toggle right navbar 
+//toggle right navbar & force remove navbar
 {
-    if(document.body.offsetWidth <= 768){
-        function toggleShowNav(){
+    function toggleShowNav(){
+        if(document.body.offsetWidth < 768){
             var rightNavbar =  document.getElementById("right-navbar");
             var removeRightNavbar =  document.getElementById("remove-right-navbar");
             if(rightNavbar.style.visibility === "hidden"){
@@ -111,5 +113,21 @@
                 removeRightNavbar.style.visibility = "hidden";
             }
         }
-    }   
+    }
+    function forceRemoveNav(){
+        if(document.body.offsetWidth > 768){
+            var removeRightNavbar =  document.getElementById("remove-right-navbar");
+            removeRightNavbar.style.visibility = "hidden";
+        }
+    }
+    function forceAddNav(){
+        var rightNavbar =  document.getElementById("right-navbar");
+        var removeRightNavbar =  document.getElementById("remove-right-navbar");
+        if(document.body.offsetWidth < 768 && rightNavbar.style.visibility === "visible"){
+            removeRightNavbar.style.visibility = "visible";
+        }
+        else{
+            removeRightNavbar.style.visibility = "hidden";
+        }
+    }
 }
