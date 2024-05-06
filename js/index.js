@@ -22,14 +22,32 @@
         let widthWebPage = document.body.offsetWidth;
         if(widthWebPage >= 768){
             console.log("bigger");
-            SlidesValue =  "2.5";
+            SlidesValue = 2.5;
+            updateSwiperjs();
             forceRemoveNav();
         }
         else{
             console.log("smaller");
-            SlidesValue =  "1.5";
+            SlidesValue = 1.5;
+            updateSwiperjs();
             forceAddNav();
         }
+        
+    })
+}
+// Initialize Swiper
+{
+    var SlidesValue =  "2.5";
+    if(document.body.offsetWidth >= 768){
+        SlidesValue =  "2.5";
+        updateSwiperjs()
+    }
+    else{
+        SlidesValue =  "1.5";
+        updateSwiperjs()
+    }
+    
+    function updateSwiperjs(){
         var swiper = new Swiper(".swiper-socialproof", {
             effect: "coverflow",
             grabCursor: true,
@@ -52,39 +70,7 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-    })
-}
-// Initialize Swiper
-{
-    var SlidesValue =  "2.5";
-    if(document.body.offsetWidth >= 768){
-        SlidesValue =  "2.5";
     }
-    else{
-        SlidesValue =  "1.5";
-    }
-    var swiper = new Swiper(".swiper-socialproof", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        rewind: true,
-        slidesPerView: SlidesValue,
-        coverflowEffect: {
-            rotate: 180,
-            stretch: 0,
-            depth: 10,
-            modifier: 0.3,
-            slideShadows: true,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
 }
 //hidden contact form & request alert
 {
@@ -115,16 +101,19 @@
         }
     }
     function forceRemoveNav(){
+        var rightNavbar =  document.getElementById("right-navbar");
+        var removeRightNavbar =  document.getElementById("remove-right-navbar");
         if(document.body.offsetWidth > 768){
-            var removeRightNavbar =  document.getElementById("remove-right-navbar");
             removeRightNavbar.style.visibility = "hidden";
+            rightNavbar.style.visibility = "visible";
         }
     }
     function forceAddNav(){
         var rightNavbar =  document.getElementById("right-navbar");
         var removeRightNavbar =  document.getElementById("remove-right-navbar");
         if(document.body.offsetWidth < 768 && rightNavbar.style.visibility === "visible"){
-            removeRightNavbar.style.visibility = "visible";
+            rightNavbar.style.visibility = "hidden";
+            removeRightNavbar.style.visibility = "hidden";
         }
         else{
             removeRightNavbar.style.visibility = "hidden";

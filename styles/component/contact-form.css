@@ -13,9 +13,10 @@
     grid-template-columns: 15rem 25rem;
     position: absolute;
     height: 60%;
+    place-self: center; 
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    /* top: 50%; */
+    transform: translate(-50%, 0);
     text-align: center;
     z-index: 11;
 }
@@ -50,4 +51,14 @@
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
+}
+@media(max-width:768px){
+    .contact-form{
+        grid-template-columns: 15rem 15rem;
+    }
+}
+@media(max-width:640px){
+    .contact-form{
+        grid-template-columns: 15rem 12rem;
+    }
 }

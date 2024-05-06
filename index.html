@@ -342,9 +342,11 @@
                         console.log('SUCCESS!');
                         contact.style.visibility = "hidden";
                         alert("Message Sent");
+                        document.getElementById("contact-form").reset();
                     }, (error) => {
                         console.log('FAILED...', error);
                         alert("Message Failed");
+                        document.getElementById("contact-form").reset();
                     });
             });
         }
